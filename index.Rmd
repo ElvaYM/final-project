@@ -1,6 +1,6 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAMES HERE"
+title: "5293-Final Project"
+author: "Yujie Tu, Yuchen Meng"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
