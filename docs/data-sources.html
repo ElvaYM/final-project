@@ -23,7 +23,7 @@
 <meta name="author" content="Yujie Tu, Yuchen Meng" />
 
 
-<meta name="date" content="2022-04-24" />
+<meta name="date" content="2022-04-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -102,14 +102,10 @@
 <h1><span class="header-section-number">Chapter 2</span> Data sources<a href="data-sources.html#data-sources" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Our data come from <a href="https://ghtorrent.org/">the GHTorrent Project</a>, which is “an effort to create a scalable, queriable, offline mirror of data offered through the Github REST API.” It includes the complete data up to 2019-06-30 (in the format of MySql dumps and MongoDB daily dumps). Due to our limited computing power, we choose to use only one day’s data (the raw data is about 23 gigabytes), <a href="http://ghtorrent-downloads.ewi.tudelft.nl/mongo-daily/mongo-dump-2019-06-30.tar.gz">2019-06-30</a>.</p>
 <p>The raw GHTorrent data consists of 16 tables and is stored in <a href="https://en.wikipedia.org/wiki/BSON">bson</a> format. The schema is provided under the resources/schema folder:</p>
-<pre><code>##  [1] &quot;commit_comments.txt&quot;       &quot;commits.txt&quot;              
-##  [3] &quot;events.txt&quot;                &quot;forks.txt&quot;                
-##  [5] &quot;geo_cache.txt&quot;             &quot;issue_comments.txt&quot;       
-##  [7] &quot;issue_events.txt&quot;          &quot;issues.txt&quot;               
-##  [9] &quot;org_members.txt&quot;           &quot;pull_request_comments.txt&quot;
-## [11] &quot;pull_requests.txt&quot;         &quot;repo_labels.txt&quot;          
-## [13] &quot;repos.txt&quot;                 &quot;topics.txt&quot;               
-## [15] &quot;users.txt&quot;                 &quot;watchers.txt&quot;</code></pre>
+<pre><code>##  [1] &quot;commit_comments.txt&quot;       &quot;commits.txt&quot;               &quot;events.txt&quot;                &quot;forks.txt&quot;                 &quot;geo_cache.txt&quot;            
+##  [6] &quot;issue_comments.txt&quot;        &quot;issue_events.txt&quot;          &quot;issues.txt&quot;                &quot;org_members.txt&quot;           &quot;pull_request_comments.txt&quot;
+## [11] &quot;pull_requests.txt&quot;         &quot;repo_labels.txt&quot;           &quot;repos.txt&quot;                 &quot;topics.txt&quot;                &quot;users.txt&quot;                
+## [16] &quot;watchers.txt&quot;</code></pre>
 <p>And a typical schema file of the table includes three elements: the number of records, the schema of one record, and an example record:</p>
 <pre><code>## resources/schema/commits.txt: 
 ##  Total records: 624376  
