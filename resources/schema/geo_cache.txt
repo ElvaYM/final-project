@@ -1,0 +1,14 @@
+Total records: 77 
+Schema: 
+root: 
+ |-- _id:	<class 'bson.objectid.ObjectId'>
+ |-- key:	<class 'str'>
+ |-- long:	<class 'float'>
+ |-- lat:	<class 'float'>
+ |-- city:	<class 'str'>
+ |-- country:	<class 'str'>
+ |-- state:	<class 'str'>
+ |-- country_code:	<class 'str'>
+ |-- status:	<class 'str'>
+ |-- updated_at:	<class 'datetime.datetime'>
+Example json:

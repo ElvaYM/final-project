@@ -1,0 +1,158 @@
+Total records: 29181 
+Schema: 
+root: 
+ |-- _id:	<class 'bson.objectid.ObjectId'>
+ |-- id:	<class 'int'>
+ |-- node_id:	<class 'str'>
+ |-- name:	<class 'str'>
+ |-- full_name:	<class 'str'>
+ |-- private:	<class 'bool'>
+ |-- owner:	<class 'str'>
+ |-- html_url:	<class 'str'>
+ |-- description:	<class 'str'>
+ |-- fork:	<class 'bool'>
+ |-- url:	<class 'str'>
+ |-- forks_url:	<class 'str'>
+ |-- keys_url:	<class 'str'>
+ |-- collaborators_url:	<class 'str'>
+ |-- teams_url:	<class 'str'>
+ |-- hooks_url:	<class 'str'>
+ |-- issue_events_url:	<class 'str'>
+ |-- events_url:	<class 'str'>
+ |-- assignees_url:	<class 'str'>
+ |-- branches_url:	<class 'str'>
+ |-- tags_url:	<class 'str'>
+ |-- blobs_url:	<class 'str'>
+ |-- git_tags_url:	<class 'str'>
+ |-- git_refs_url:	<class 'str'>
+ |-- trees_url:	<class 'str'>
+ |-- statuses_url:	<class 'str'>
+ |-- languages_url:	<class 'str'>
+ |-- stargazers_url:	<class 'str'>
+ |-- contributors_url:	<class 'str'>
+ |-- subscribers_url:	<class 'str'>
+ |-- subscription_url:	<class 'str'>
+ |-- commits_url:	<class 'str'>
+ |-- git_commits_url:	<class 'str'>
+ |-- comments_url:	<class 'str'>
+ |-- issue_comment_url:	<class 'str'>
+ |-- contents_url:	<class 'str'>
+ |-- compare_url:	<class 'str'>
+ |-- merges_url:	<class 'str'>
+ |-- archive_url:	<class 'str'>
+ |-- downloads_url:	<class 'str'>
+ |-- issues_url:	<class 'str'>
+ |-- pulls_url:	<class 'str'>
+ |-- milestones_url:	<class 'str'>
+ |-- notifications_url:	<class 'str'>
+ |-- labels_url:	<class 'str'>
+ |-- releases_url:	<class 'str'>
+ |-- deployments_url:	<class 'str'>
+ |-- created_at:	<class 'str'>
+ |-- updated_at:	<class 'str'>
+ |-- pushed_at:	<class 'str'>
+ |-- git_url:	<class 'str'>
+ |-- ssh_url:	<class 'str'>
+ |-- clone_url:	<class 'str'>
+ |-- svn_url:	<class 'str'>
+ |-- homepage:	<class 'str'>
+ |-- size:	<class 'int'>
+ |-- stargazers_count:	<class 'int'>
+ |-- watchers_count:	<class 'int'>
+ |-- language:	<class 'NoneType'>
+ |-- has_issues:	<class 'bool'>
+ |-- has_projects:	<class 'bool'>
+ |-- has_downloads:	<class 'bool'>
+ |-- has_wiki:	<class 'bool'>
+ |-- has_pages:	<class 'bool'>
+ |-- forks_count:	<class 'int'>
+ |-- mirror_url:	<class 'NoneType'>
+ |-- archived:	<class 'bool'>
+ |-- disabled:	<class 'bool'>
+ |-- open_issues_count:	<class 'int'>
+ |-- license:	<class 'NoneType'>
+ |-- forks:	<class 'int'>
+ |-- open_issues:	<class 'int'>
+ |-- watchers:	<class 'int'>
+ |-- default_branch:	<class 'str'>
+ |-- public:	<class 'bool'>
+ |-- repo:	<class 'str'>
+Example json:
+{
+  "_id": "5d18190ebb68052763745baa",
+  "id": 194465131,
+  "node_id": "MDEwOlJlcG9zaXRvcnkxOTQ0NjUxMzE=",
+  "name": "nginx-varnish-wordpress",
+  "full_name": "fuka2000/nginx-varnish-wordpress",
+  "private": false,
+  "owner": "alxshelepenok",
+  "html_url": "https://github.com/fuka2000/nginx-varnish-wordpress",
+  "description": "Nginx tuning for best performance",
+  "fork": true,
+  "url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress",
+  "forks_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/forks",
+  "keys_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/keys{/key_id}",
+  "collaborators_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/collaborators{/collaborator}",
+  "teams_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/teams",
+  "hooks_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/hooks",
+  "issue_events_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/issues/events{/number}",
+  "events_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/events",
+  "assignees_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/assignees{/user}",
+  "branches_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/branches{/branch}",
+  "tags_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/tags",
+  "blobs_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/git/blobs{/sha}",
+  "git_tags_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/git/tags{/sha}",
+  "git_refs_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/git/refs{/sha}",
+  "trees_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/git/trees{/sha}",
+  "statuses_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/statuses/{sha}",
+  "languages_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/languages",
+  "stargazers_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/stargazers",
+  "contributors_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/contributors",
+  "subscribers_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/subscribers",
+  "subscription_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/subscription",
+  "commits_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/commits{/sha}",
+  "git_commits_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/git/commits{/sha}",
+  "comments_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/comments{/number}",
+  "issue_comment_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/issues/comments{/number}",
+  "contents_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/contents/{+path}",
+  "compare_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/compare/{base}...{head}",
+  "merges_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/merges",
+  "archive_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/{archive_format}{/ref}",
+  "downloads_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/downloads",
+  "issues_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/issues{/number}",
+  "pulls_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/pulls{/number}",
+  "milestones_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/milestones{/number}",
+  "notifications_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/notifications{?since,all,participating}",
+  "labels_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/labels{/name}",
+  "releases_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/releases{/id}",
+  "deployments_url": "https://api.github.com/repos/fuka2000/nginx-varnish-wordpress/deployments",
+  "created_at": "2019-06-30T02:01:04Z",
+  "updated_at": "2017-12-29T14:34:19Z",
+  "pushed_at": "2017-06-07T23:54:00Z",
+  "git_url": "git://github.com/fuka2000/nginx-varnish-wordpress.git",
+  "ssh_url": "git@github.com:fuka2000/nginx-varnish-wordpress.git",
+  "clone_url": "https://github.com/fuka2000/nginx-varnish-wordpress.git",
+  "svn_url": "https://github.com/fuka2000/nginx-varnish-wordpress",
+  "homepage": "",
+  "size": 49,
+  "stargazers_count": 0,
+  "watchers_count": 0,
+  "language": null,
+  "has_issues": false,
+  "has_projects": true,
+  "has_downloads": true,
+  "has_wiki": true,
+  "has_pages": false,
+  "forks_count": 0,
+  "mirror_url": null,
+  "archived": false,
+  "disabled": false,
+  "open_issues_count": 0,
+  "license": null,
+  "forks": 0,
+  "open_issues": 0,
+  "watchers": 0,
+  "default_branch": "master",
+  "public": true,
+  "repo": "nginx-varnish-wordpress"
+}

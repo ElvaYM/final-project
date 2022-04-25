@@ -1,0 +1,107 @@
+Total records: 10379 
+Schema: 
+root: 
+ |-- _id:	<class 'bson.objectid.ObjectId'>
+ |-- url:	<class 'str'>
+ |-- pull_request_review_id:	<class 'int'>
+ |-- id:	<class 'int'>
+ |-- node_id:	<class 'str'>
+ |-- diff_hunk:	<class 'str'>
+ |-- path:	<class 'str'>
+ |-- position:	<class 'int'>
+ |-- original_position:	<class 'int'>
+ |-- commit_id:	<class 'str'>
+ |-- original_commit_id:	<class 'str'>
+ |-- user:	
+      |-- login:	<class 'str'>
+      |-- id:	<class 'int'>
+      |-- node_id:	<class 'str'>
+      |-- avatar_url:	<class 'str'>
+      |-- gravatar_id:	<class 'str'>
+      |-- url:	<class 'str'>
+      |-- html_url:	<class 'str'>
+      |-- followers_url:	<class 'str'>
+      |-- following_url:	<class 'str'>
+      |-- gists_url:	<class 'str'>
+      |-- starred_url:	<class 'str'>
+      |-- subscriptions_url:	<class 'str'>
+      |-- organizations_url:	<class 'str'>
+      |-- repos_url:	<class 'str'>
+      |-- events_url:	<class 'str'>
+      |-- received_events_url:	<class 'str'>
+      |-- type:	<class 'str'>
+      |-- site_admin:	<class 'bool'>
+ |-- body:	<class 'str'>
+ |-- created_at:	<class 'str'>
+ |-- updated_at:	<class 'str'>
+ |-- html_url:	<class 'str'>
+ |-- pull_request_url:	<class 'str'>
+ |-- author_association:	<class 'str'>
+ |-- _links:	
+      |-- self:	
+           |-- href:	<class 'str'>
+      |-- html:	
+           |-- href:	<class 'str'>
+      |-- pull_request:	
+           |-- href:	<class 'str'>
+ |-- in_reply_to_id:	<class 'int'>
+ |-- etag:	<class 'str'>
+ |-- repo:	<class 'str'>
+ |-- owner:	<class 'str'>
+ |-- pullreq_id:	<class 'int'>
+Example json:
+{
+  "_id": "5d1969626480fd0d5ef3a505",
+  "url": "https://api.github.com/repos/dpc-sdp/ripple/pulls/comments/298862416",
+  "pull_request_review_id": 256106885,
+  "id": 298862416,
+  "node_id": "MDI0OlB1bGxSZXF1ZXN0UmV2aWV3Q29tbWVudDI5ODg2MjQxNg==",
+  "diff_hunk": "@@ -0,0 +1,82 @@\n+<template>\n+  <div>\n+    <div class=\"menu\">\n+      <rpl-text-link class=\"header-btn\" :text=\"`Browse by ${isArea ? 'area' : 'category'}`\" url size=\"small\" emphasis/>\n+      <div class=\"other-btn\" v-on:click=\"clickShowOther\">\n+        <rpl-text-link\n+          :text=\"`Browse by ${isArea ? 'category' : 'area'}`\"\n+          url\n+          iconColor=\"primary\"\n+          :underline=\"true\"\n+          size=\"small\"\n+          emphasis\n+        />\n+      </div>\n+    </div>\n+    <tideMapCard\n+      v-for=\"(item, index) in items\"\n+      v-on:item-clicked=\"setCategory\"\n+      :key=\"index\"\n+      :isArea=\"isArea\"\n+      :item=\"item\"\n+    />\n+  </div>\n+</template>\n+\n+<script>\n+import { RplTextLink } from '@dpc-sdp/ripple-link'\n+import TideMapCard from './TideMapCard'\n+\n+export default {\n+  name: 'TideMapCategoriesPage',\n+  props: {\n+    items: Array,\n+    isArea: Boolean\n+  },\n+  methods: {\n+    clickShowOther () {\n+      if (this.isArea) {\n+        this.$emit('clickShowCategories')\n+      } else {\n+        this.$emit('clickShowArea')\n+      }\n+    },\n+    setCategory (cat) {\n+      this.$emit('clickCategory', cat)\n+    }\n+  },\n+  components: {",
+  "path": "packages/ripple-nuxt-tide/modules/data-driven-component/components/TideMapPreventionFamilyViolence/TideMapCategoriesPage.vue",
+  "position": 48,
+  "original_position": 48,
+  "commit_id": "55aa1c20fdcfcc5bd902d3adfc50497e576b5df9",
+  "original_commit_id": "55aa1c20fdcfcc5bd902d3adfc50497e576b5df9",
+  "user": {
+    "login": "richorama",
+    "id": 353138,
+    "node_id": "MDQ6VXNlcjM1MzEzOA==",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/353138?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/richorama",
+    "html_url": "https://github.com/richorama",
+    "followers_url": "https://api.github.com/users/richorama/followers",
+    "following_url": "https://api.github.com/users/richorama/following{/other_user}",
+    "gists_url": "https://api.github.com/users/richorama/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/richorama/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/richorama/subscriptions",
+    "organizations_url": "https://api.github.com/users/richorama/orgs",
+    "repos_url": "https://api.github.com/users/richorama/repos",
+    "events_url": "https://api.github.com/users/richorama/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/richorama/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "body": "reviewed the order of every component",
+  "created_at": "2019-07-01T01:55:34Z",
+  "updated_at": "2019-07-01T01:55:34Z",
+  "html_url": "https://github.com/dpc-sdp/ripple/pull/401#discussion_r298862416",
+  "pull_request_url": "https://api.github.com/repos/dpc-sdp/ripple/pulls/401",
+  "author_association": "COLLABORATOR",
+  "_links": {
+    "self": {
+      "href": "https://api.github.com/repos/dpc-sdp/ripple/pulls/comments/298862416"
+    },
+    "html": {
+      "href": "https://github.com/dpc-sdp/ripple/pull/401#discussion_r298862416"
+    },
+    "pull_request": {
+      "href": "https://api.github.com/repos/dpc-sdp/ripple/pulls/401"
+    }
+  },
+  "in_reply_to_id": 298472110,
+  "etag": "7e57df0b60f557d8c850e1e81db63b75",
+  "repo": "ripple",
+  "owner": "dpc-sdp",
+  "pullreq_id": 401
+}

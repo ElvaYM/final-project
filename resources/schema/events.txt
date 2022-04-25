@@ -1,0 +1,53 @@
+Total records: 1060157 
+Schema: 
+root: 
+ |-- _id:	<class 'bson.objectid.ObjectId'>
+ |-- id:	<class 'str'>
+ |-- type:	<class 'str'>
+ |-- actor:	
+      |-- id:	<class 'int'>
+      |-- login:	<class 'str'>
+      |-- display_login:	<class 'str'>
+      |-- gravatar_id:	<class 'str'>
+      |-- url:	<class 'str'>
+      |-- avatar_url:	<class 'str'>
+ |-- repo:	
+      |-- id:	<class 'int'>
+      |-- name:	<class 'str'>
+      |-- url:	<class 'str'>
+ |-- payload:	
+      |-- ref:	<class 'NoneType'>
+      |-- ref_type:	<class 'str'>
+      |-- master_branch:	<class 'str'>
+      |-- description:	<class 'str'>
+      |-- pusher_type:	<class 'str'>
+ |-- public:	<class 'bool'>
+ |-- created_at:	<class 'str'>
+Example json:
+{
+  "_id": "5d1819086480fdee2c7f2a90",
+  "id": "9919830540",
+  "type": "CreateEvent",
+  "actor": {
+    "id": 52364277,
+    "login": "pepear912",
+    "display_login": "pepear912",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pepear912",
+    "avatar_url": "https://avatars.githubusercontent.com/u/52364277?"
+  },
+  "repo": {
+    "id": 194465123,
+    "name": "pepear912/RESTapitest",
+    "url": "https://api.github.com/repos/pepear912/RESTapitest"
+  },
+  "payload": {
+    "ref": null,
+    "ref_type": "repository",
+    "master_branch": "master",
+    "description": "RESTapitest",
+    "pusher_type": "user"
+  },
+  "public": true,
+  "created_at": "2019-06-30T02:00:57Z"
+}

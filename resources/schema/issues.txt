@@ -1,0 +1,99 @@
+Total records: 35950 
+Schema: 
+root: 
+ |-- _id:	<class 'bson.objectid.ObjectId'>
+ |-- url:	<class 'str'>
+ |-- repository_url:	<class 'str'>
+ |-- labels_url:	<class 'str'>
+ |-- comments_url:	<class 'str'>
+ |-- events_url:	<class 'str'>
+ |-- html_url:	<class 'str'>
+ |-- id:	<class 'int'>
+ |-- node_id:	<class 'str'>
+ |-- number:	<class 'int'>
+ |-- title:	<class 'str'>
+ |-- user:	
+      |-- login:	<class 'str'>
+      |-- id:	<class 'int'>
+      |-- node_id:	<class 'str'>
+      |-- avatar_url:	<class 'str'>
+      |-- gravatar_id:	<class 'str'>
+      |-- url:	<class 'str'>
+      |-- html_url:	<class 'str'>
+      |-- followers_url:	<class 'str'>
+      |-- following_url:	<class 'str'>
+      |-- gists_url:	<class 'str'>
+      |-- starred_url:	<class 'str'>
+      |-- subscriptions_url:	<class 'str'>
+      |-- organizations_url:	<class 'str'>
+      |-- repos_url:	<class 'str'>
+      |-- events_url:	<class 'str'>
+      |-- received_events_url:	<class 'str'>
+      |-- type:	<class 'str'>
+      |-- site_admin:	<class 'bool'>
+ |-- labels:	<class 'list'>
+ |-- state:	<class 'str'>
+ |-- locked:	<class 'bool'>
+ |-- assignee:	<class 'NoneType'>
+ |-- assignees:	<class 'list'>
+ |-- milestone:	<class 'NoneType'>
+ |-- comments:	<class 'int'>
+ |-- created_at:	<class 'str'>
+ |-- updated_at:	<class 'str'>
+ |-- closed_at:	<class 'NoneType'>
+ |-- author_association:	<class 'str'>
+ |-- body:	<class 'str'>
+ |-- closed_by:	<class 'NoneType'>
+ |-- etag:	<class 'str'>
+ |-- repo:	<class 'str'>
+ |-- owner:	<class 'str'>
+Example json:
+{
+  "_id": "5d18191e6480fd0cf42e9d47",
+  "url": "https://api.github.com/repos/andrew-j-levy/Hierarchical-Actor-Critc-HAC-/issues/10",
+  "repository_url": "https://api.github.com/repos/andrew-j-levy/Hierarchical-Actor-Critc-HAC-",
+  "labels_url": "https://api.github.com/repos/andrew-j-levy/Hierarchical-Actor-Critc-HAC-/issues/10/labels{/name}",
+  "comments_url": "https://api.github.com/repos/andrew-j-levy/Hierarchical-Actor-Critc-HAC-/issues/10/comments",
+  "events_url": "https://api.github.com/repos/andrew-j-levy/Hierarchical-Actor-Critc-HAC-/issues/10/events",
+  "html_url": "https://github.com/andrew-j-levy/Hierarchical-Actor-Critc-HAC-/issues/10",
+  "id": 462358207,
+  "node_id": "MDU6SXNzdWU0NjIzNTgyMDc=",
+  "number": 10,
+  "title": "Training will continue even when the end goal is achieved?",
+  "user": {
+    "login": "ChengshuLi",
+    "id": 6732996,
+    "node_id": "MDQ6VXNlcjY3MzI5OTY=",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/6732996?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ChengshuLi",
+    "html_url": "https://github.com/ChengshuLi",
+    "followers_url": "https://api.github.com/users/ChengshuLi/followers",
+    "following_url": "https://api.github.com/users/ChengshuLi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ChengshuLi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ChengshuLi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ChengshuLi/subscriptions",
+    "organizations_url": "https://api.github.com/users/ChengshuLi/orgs",
+    "repos_url": "https://api.github.com/users/ChengshuLi/repos",
+    "events_url": "https://api.github.com/users/ChengshuLi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ChengshuLi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2019-06-30T02:01:12Z",
+  "updated_at": "2019-06-30T02:02:31Z",
+  "closed_at": null,
+  "author_association": "NONE",
+  "body": "Thank you so much for sharing your work!\r\n\r\nI just have a quick question about the following comment:\r\n\r\nhttps://github.com/andrew-j-levy/Hierarchical-Actor-Critc-HAC-/blob/504288596f79ebd5494cfd0978d66e1f7cc7c7df/layer.py#L275-L276\r\n\r\nI am wondering why you would want the episode to continue even when the end goal is achieved. Is it because the agent will collect more transitions around the end goal and add them to the experience buffer, and for some reason this helps the training process? \r\n\r\nMy second question is that which part of the code implements this mechanism. I haven't got the chance to run your code extensively, so please correct me if I am wrong, but my understanding is that `max_lay_achieved` will be equal to the highest layer (i.e. `self.layer_number`) if end goal is achieved, so `return_to_higher_level` will still return true and terminates the current episode? Why will the highest level policy still be able to set subgoals afterwards?\r\n\r\nThanks a lot! ",
+  "closed_by": null,
+  "etag": "e2ec9154857a06dbb1ca7a6596811930",
+  "repo": "Hierarchical-Actor-Critc-HAC-",
+  "owner": "andrew-j-levy"
+}
