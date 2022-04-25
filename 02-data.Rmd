@@ -1,2 +1,18 @@
 # Data sources
 
+Our data come from [the GHTorrent Project](https://ghtorrent.org/), which is "an effort to create a scalable, queriable, offline mirror of data offered through the Github REST API." It includes the complete data up to 2019-06-30 (in the format of MySql dumps and MongoDB daily dumps). Due to our limited computing power, we choose to use only one day's data (the raw data is about 23 gigabytes), [2019-06-30](http://ghtorrent-downloads.ewi.tudelft.nl/mongo-daily/mongo-dump-2019-06-30.tar.gz).
+
+The raw GHTorrent data consists of 16 tables and is stored in [bson](https://en.wikipedia.org/wiki/BSON) format. The schema is provided under the resources/schema folder:
+
+```{r}
+list.files("resources/schema")
+```
+
+And a typical schema file of the table includes three elements: the number of records, the schema of one record, and an example record:
+
+```{r}
+file = file("resources/schema/commits.txt")
+lines = c("resources/schema/commits.txt:", readLines(file, n = 10), "...")
+paste(lines, "\n") |> noquote() |> cat()
+close(file)
+```
