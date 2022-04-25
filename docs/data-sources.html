@@ -4,26 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Data sources | YOUR TITLE HERE</title>
-  <meta name="description" content="Chapter 2 Data sources | YOUR TITLE HERE" />
+  <title>Chapter 2 Data sources | 5293-Final Project</title>
+  <meta name="description" content="Chapter 2 Data sources | 5293-Final Project" />
   <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Data sources | YOUR TITLE HERE" />
+  <meta property="og:title" content="Chapter 2 Data sources | 5293-Final Project" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Data sources | YOUR TITLE HERE" />
+  <meta name="twitter:title" content="Chapter 2 Data sources | 5293-Final Project" />
   
   
   
 
-<meta name="author" content="YOUR NAMES HERE" />
+<meta name="author" content="Yujie Tu, Yuchen Meng" />
 
 
-<meta name="date" content="2022-04-07" />
+<meta name="date" content="2022-04-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -90,7 +90,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">YOUR TITLE HERE</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">5293-Final Project</a>
           </h1>
         </div>
 
@@ -100,6 +100,29 @@
             <section class="normal" id="section-">
 <div id="data-sources" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Data sources<a href="data-sources.html#data-sources" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Our data come from <a href="https://ghtorrent.org/">the GHTorrent Project</a>, which is “an effort to create a scalable, queriable, offline mirror of data offered through the Github REST API.” It includes the complete data up to 2019-06-30 (in the format of MySql dumps and MongoDB daily dumps). Due to our limited computing power, we choose to use only one day’s data (the raw data is about 23 gigabytes), <a href="http://ghtorrent-downloads.ewi.tudelft.nl/mongo-daily/mongo-dump-2019-06-30.tar.gz">2019-06-30</a>.</p>
+<p>The raw GHTorrent data consists of 16 tables and is stored in <a href="https://en.wikipedia.org/wiki/BSON">bson</a> format. The schema is provided under the resources/schema folder:</p>
+<pre><code>##  [1] &quot;commit_comments.txt&quot;       &quot;commits.txt&quot;              
+##  [3] &quot;events.txt&quot;                &quot;forks.txt&quot;                
+##  [5] &quot;geo_cache.txt&quot;             &quot;issue_comments.txt&quot;       
+##  [7] &quot;issue_events.txt&quot;          &quot;issues.txt&quot;               
+##  [9] &quot;org_members.txt&quot;           &quot;pull_request_comments.txt&quot;
+## [11] &quot;pull_requests.txt&quot;         &quot;repo_labels.txt&quot;          
+## [13] &quot;repos.txt&quot;                 &quot;topics.txt&quot;               
+## [15] &quot;users.txt&quot;                 &quot;watchers.txt&quot;</code></pre>
+<p>And a typical schema file of the table includes three elements: the number of records, the schema of one record, and an example record:</p>
+<pre><code>## resources/schema/commits.txt: 
+##  Total records: 624376  
+##  Schema:  
+##  root:  
+##   |-- _id:   &lt;class &#39;bson.objectid.ObjectId&#39;&gt; 
+##   |-- sha:   &lt;class &#39;str&#39;&gt; 
+##   |-- node_id:   &lt;class &#39;str&#39;&gt; 
+##   |-- commit:     
+##        |-- author:    
+##             |-- name:    &lt;class &#39;str&#39;&gt; 
+##             |-- email:   &lt;class &#39;str&#39;&gt; 
+##  ...</code></pre>
 
 </div>
             </section>

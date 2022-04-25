@@ -4,26 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Data transformation | YOUR TITLE HERE</title>
-  <meta name="description" content="Chapter 3 Data transformation | YOUR TITLE HERE" />
+  <title>Chapter 3 Data transformation | 5293-Final Project</title>
+  <meta name="description" content="Chapter 3 Data transformation | 5293-Final Project" />
   <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Data transformation | YOUR TITLE HERE" />
+  <meta property="og:title" content="Chapter 3 Data transformation | 5293-Final Project" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Data transformation | YOUR TITLE HERE" />
+  <meta name="twitter:title" content="Chapter 3 Data transformation | 5293-Final Project" />
   
   
   
 
-<meta name="author" content="YOUR NAMES HERE" />
+<meta name="author" content="Yujie Tu, Yuchen Meng" />
 
 
-<meta name="date" content="2022-04-07" />
+<meta name="date" content="2022-04-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -90,7 +90,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">YOUR TITLE HERE</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">5293-Final Project</a>
           </h1>
         </div>
 
@@ -100,6 +100,243 @@
             <section class="normal" id="section-">
 <div id="data-transformation" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">Chapter 3</span> Data transformation<a href="data-transformation.html#data-transformation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Out of the 16 tables provided by the GHTorrent project, we will use commits, issue comments, and pull request comments. Their original schemas are as follows:</p>
+<pre><code>## resources/schema/commits.txt 
+## Total records: 624376  
+## Schema:  
+## root:  
+##  |-- _id:    &lt;class &#39;bson.objectid.ObjectId&#39;&gt; 
+##  |-- sha:    &lt;class &#39;str&#39;&gt; 
+##  |-- node_id:    &lt;class &#39;str&#39;&gt; 
+##  |-- commit:  
+##       |-- author:     
+##            |-- name: &lt;class &#39;str&#39;&gt; 
+##            |-- email:    &lt;class &#39;str&#39;&gt; 
+##            |-- date: &lt;class &#39;str&#39;&gt; 
+##       |-- committer:  
+##            |-- name: &lt;class &#39;str&#39;&gt; 
+##            |-- email:    &lt;class &#39;str&#39;&gt; 
+##            |-- date: &lt;class &#39;str&#39;&gt; 
+##       |-- message:   &lt;class &#39;str&#39;&gt; 
+##       |-- tree:   
+##            |-- sha:  &lt;class &#39;str&#39;&gt; 
+##            |-- url:  &lt;class &#39;str&#39;&gt; 
+##       |-- url:   &lt;class &#39;str&#39;&gt; 
+##       |-- comment_count: &lt;class &#39;int&#39;&gt; 
+##       |-- verification:   
+##            |-- verified: &lt;class &#39;bool&#39;&gt; 
+##            |-- reason:   &lt;class &#39;str&#39;&gt; 
+##            |-- signature:    &lt;class &#39;NoneType&#39;&gt; 
+##            |-- payload:  &lt;class &#39;NoneType&#39;&gt; 
+##  |-- url:    &lt;class &#39;str&#39;&gt; 
+##  |-- html_url:   &lt;class &#39;str&#39;&gt; 
+##  |-- comments_url:   &lt;class &#39;str&#39;&gt; 
+##  |-- author:  
+##       |-- login: &lt;class &#39;str&#39;&gt; 
+##       |-- id:    &lt;class &#39;int&#39;&gt; 
+##       |-- node_id:   &lt;class &#39;str&#39;&gt; 
+##       |-- avatar_url:    &lt;class &#39;str&#39;&gt; 
+##       |-- gravatar_id:   &lt;class &#39;str&#39;&gt; 
+##       |-- url:   &lt;class &#39;str&#39;&gt; 
+##       |-- html_url:  &lt;class &#39;str&#39;&gt; 
+##       |-- followers_url: &lt;class &#39;str&#39;&gt; 
+##       |-- following_url: &lt;class &#39;str&#39;&gt; 
+##       |-- gists_url: &lt;class &#39;str&#39;&gt; 
+##       |-- starred_url:   &lt;class &#39;str&#39;&gt; 
+##       |-- subscriptions_url: &lt;class &#39;str&#39;&gt; 
+##       |-- organizations_url: &lt;class &#39;str&#39;&gt; 
+##       |-- repos_url: &lt;class &#39;str&#39;&gt; 
+##       |-- events_url:    &lt;class &#39;str&#39;&gt; 
+##       |-- received_events_url:   &lt;class &#39;str&#39;&gt; 
+##       |-- type:  &lt;class &#39;str&#39;&gt; 
+##       |-- site_admin:    &lt;class &#39;bool&#39;&gt; 
+##  |-- committer:   
+##       |-- login: &lt;class &#39;str&#39;&gt; 
+##       |-- id:    &lt;class &#39;int&#39;&gt; 
+##       |-- node_id:   &lt;class &#39;str&#39;&gt; 
+##       |-- avatar_url:    &lt;class &#39;str&#39;&gt; 
+##       |-- gravatar_id:   &lt;class &#39;str&#39;&gt; 
+##       |-- url:   &lt;class &#39;str&#39;&gt; 
+##       |-- html_url:  &lt;class &#39;str&#39;&gt; 
+##       |-- followers_url: &lt;class &#39;str&#39;&gt; 
+##       |-- following_url: &lt;class &#39;str&#39;&gt; 
+##       |-- gists_url: &lt;class &#39;str&#39;&gt; 
+##       |-- starred_url:   &lt;class &#39;str&#39;&gt; 
+##       |-- subscriptions_url: &lt;class &#39;str&#39;&gt; 
+##       |-- organizations_url: &lt;class &#39;str&#39;&gt; 
+##       |-- repos_url: &lt;class &#39;str&#39;&gt; 
+##       |-- events_url:    &lt;class &#39;str&#39;&gt; 
+##       |-- received_events_url:   &lt;class &#39;str&#39;&gt; 
+##       |-- type:  &lt;class &#39;str&#39;&gt; 
+##       |-- site_admin:    &lt;class &#39;bool&#39;&gt; 
+##  |-- parents:    &lt;class &#39;list&#39;&gt; 
+##  |-- stats:   
+##       |-- total: &lt;class &#39;int&#39;&gt; 
+##       |-- additions: &lt;class &#39;int&#39;&gt; 
+##       |-- deletions: &lt;class &#39;int&#39;&gt; 
+##  |-- files:  &lt;class &#39;list&#39;&gt; 
+##  |-- etag:   &lt;class &#39;str&#39;&gt; 
+## 
+## resources/schema/issue_comments.txt 
+## Total records: 41231  
+## Schema:  
+## root:  
+##  |-- _id:    &lt;class &#39;bson.objectid.ObjectId&#39;&gt; 
+##  |-- url:    &lt;class &#39;str&#39;&gt; 
+##  |-- html_url:   &lt;class &#39;str&#39;&gt; 
+##  |-- issue_url:  &lt;class &#39;str&#39;&gt; 
+##  |-- id: &lt;class &#39;int&#39;&gt; 
+##  |-- node_id:    &lt;class &#39;str&#39;&gt; 
+##  |-- user:    
+##       |-- login: &lt;class &#39;str&#39;&gt; 
+##       |-- id:    &lt;class &#39;int&#39;&gt; 
+##       |-- node_id:   &lt;class &#39;str&#39;&gt; 
+##       |-- avatar_url:    &lt;class &#39;str&#39;&gt; 
+##       |-- gravatar_id:   &lt;class &#39;str&#39;&gt; 
+##       |-- url:   &lt;class &#39;str&#39;&gt; 
+##       |-- html_url:  &lt;class &#39;str&#39;&gt; 
+##       |-- followers_url: &lt;class &#39;str&#39;&gt; 
+##       |-- following_url: &lt;class &#39;str&#39;&gt; 
+##       |-- gists_url: &lt;class &#39;str&#39;&gt; 
+##       |-- starred_url:   &lt;class &#39;str&#39;&gt; 
+##       |-- subscriptions_url: &lt;class &#39;str&#39;&gt; 
+##       |-- organizations_url: &lt;class &#39;str&#39;&gt; 
+##       |-- repos_url: &lt;class &#39;str&#39;&gt; 
+##       |-- events_url:    &lt;class &#39;str&#39;&gt; 
+##       |-- received_events_url:   &lt;class &#39;str&#39;&gt; 
+##       |-- type:  &lt;class &#39;str&#39;&gt; 
+##       |-- site_admin:    &lt;class &#39;bool&#39;&gt; 
+##  |-- created_at: &lt;class &#39;str&#39;&gt; 
+##  |-- updated_at: &lt;class &#39;str&#39;&gt; 
+##  |-- author_association: &lt;class &#39;str&#39;&gt; 
+##  |-- body:   &lt;class &#39;str&#39;&gt; 
+##  |-- etag:   &lt;class &#39;str&#39;&gt; 
+##  |-- repo:   &lt;class &#39;str&#39;&gt; 
+##  |-- owner:  &lt;class &#39;str&#39;&gt; 
+##  |-- issue_id:   &lt;class &#39;int&#39;&gt; 
+## 
+## resources/schema/pull_request_comments.txt 
+## Total records: 10379  
+## Schema:  
+## root:  
+##  |-- _id:    &lt;class &#39;bson.objectid.ObjectId&#39;&gt; 
+##  |-- url:    &lt;class &#39;str&#39;&gt; 
+##  |-- pull_request_review_id: &lt;class &#39;int&#39;&gt; 
+##  |-- id: &lt;class &#39;int&#39;&gt; 
+##  |-- node_id:    &lt;class &#39;str&#39;&gt; 
+##  |-- diff_hunk:  &lt;class &#39;str&#39;&gt; 
+##  |-- path:   &lt;class &#39;str&#39;&gt; 
+##  |-- position:   &lt;class &#39;int&#39;&gt; 
+##  |-- original_position:  &lt;class &#39;int&#39;&gt; 
+##  |-- commit_id:  &lt;class &#39;str&#39;&gt; 
+##  |-- original_commit_id: &lt;class &#39;str&#39;&gt; 
+##  |-- user:    
+##       |-- login: &lt;class &#39;str&#39;&gt; 
+##       |-- id:    &lt;class &#39;int&#39;&gt; 
+##       |-- node_id:   &lt;class &#39;str&#39;&gt; 
+##       |-- avatar_url:    &lt;class &#39;str&#39;&gt; 
+##       |-- gravatar_id:   &lt;class &#39;str&#39;&gt; 
+##       |-- url:   &lt;class &#39;str&#39;&gt; 
+##       |-- html_url:  &lt;class &#39;str&#39;&gt; 
+##       |-- followers_url: &lt;class &#39;str&#39;&gt; 
+##       |-- following_url: &lt;class &#39;str&#39;&gt; 
+##       |-- gists_url: &lt;class &#39;str&#39;&gt; 
+##       |-- starred_url:   &lt;class &#39;str&#39;&gt; 
+##       |-- subscriptions_url: &lt;class &#39;str&#39;&gt; 
+##       |-- organizations_url: &lt;class &#39;str&#39;&gt; 
+##       |-- repos_url: &lt;class &#39;str&#39;&gt; 
+##       |-- events_url:    &lt;class &#39;str&#39;&gt; 
+##       |-- received_events_url:   &lt;class &#39;str&#39;&gt; 
+##       |-- type:  &lt;class &#39;str&#39;&gt; 
+##       |-- site_admin:    &lt;class &#39;bool&#39;&gt; 
+##  |-- body:   &lt;class &#39;str&#39;&gt; 
+##  |-- created_at: &lt;class &#39;str&#39;&gt; 
+##  |-- updated_at: &lt;class &#39;str&#39;&gt; 
+##  |-- html_url:   &lt;class &#39;str&#39;&gt; 
+##  |-- pull_request_url:   &lt;class &#39;str&#39;&gt; 
+##  |-- author_association: &lt;class &#39;str&#39;&gt; 
+##  |-- _links:  
+##       |-- self:   
+##            |-- href: &lt;class &#39;str&#39;&gt; 
+##       |-- html:   
+##            |-- href: &lt;class &#39;str&#39;&gt; 
+##       |-- pull_request:   
+##            |-- href: &lt;class &#39;str&#39;&gt; 
+##  |-- in_reply_to_id: &lt;class &#39;int&#39;&gt; 
+##  |-- etag:   &lt;class &#39;str&#39;&gt; 
+##  |-- repo:   &lt;class &#39;str&#39;&gt; 
+##  |-- owner:  &lt;class &#39;str&#39;&gt; 
+##  |-- pullreq_id: &lt;class &#39;int&#39;&gt;</code></pre>
+<p>We used python to extract data from the bson file. The python script can be found in preprocess/preprocess.py, which will download the raw data set, extract the desired tables, and convert the bson files to csv file. And the extracted bson file, converted csv file will be stored under resources/raw_data and resources/data respectively.</p>
+<p>Since the amount of data are still quite large, especially for commits table, which original has over 0.6 million records, we decided to randomly subsample 10 thousand records from each file and removes some unuseful columns.</p>
+<p>The commits table has the following columns:</p>
+<pre><code>##      sha                user              author           committer        
+##  Length:10000       Length:10000       Length:10000       Length:10000      
+##  Class :character   Class :character   Class :character   Class :character  
+##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+##                                                                             
+##                                                                             
+##                                                                             
+##       time                       message             stats          
+##  Min.   :2019-06-30 00:02:28   Length:10000       Length:10000      
+##  1st Qu.:2019-06-30 08:39:57   Class :character   Class :character  
+##  Median :2019-06-30 14:01:13   Mode  :character   Mode  :character  
+##  Mean   :2019-06-30 13:31:21                                        
+##  3rd Qu.:2019-06-30 18:36:01                                        
+##  Max.   :2019-06-30 23:59:52                                        
+##      url           
+##  Length:10000      
+##  Class :character  
+##  Mode  :character  
+##                    
+##                    
+## </code></pre>
+<p><code>Sha</code> is an unique identifier for the recorder generated by GitHub, <code>user</code>, <code>author</code>, and <code>committed</code> all refer to the user(s) associated with the commit (the different between author and committed can be found <a href="https://stackoverflow.com/questions/18750808/difference-between-author-and-committer-in-git#:~:text=The%20author%20is%20the%20person,on%20behalf%20of%20another%20person.">here</a>), <code>time</code> is when the commit is committed, <code>message</code> is the commit message, <code>stats</code> contains the number of total modifications, additions and deletions for this commit, and <code>url</code> is the commit’s url link.</p>
+<p>And the issue_comments table has the following columns:</p>
+<pre><code>##        id              user_id          author_association
+##  Min.   :506997018   Length:10000       Length:10000      
+##  1st Qu.:507021152   Class :character   Class :character  
+##  Median :507040742   Mode  :character   Mode  :character  
+##  Mean   :507039963                                        
+##  3rd Qu.:507058945                                        
+##  Max.   :507077971                                        
+##    created_at                      body               url           
+##  Min.   :2019-06-30 00:32:19   Length:10000       Length:10000      
+##  1st Qu.:2019-06-30 09:17:52   Class :character   Class :character  
+##  Median :2019-06-30 14:26:43   Mode  :character   Mode  :character  
+##  Mean   :2019-06-30 13:59:31                                        
+##  3rd Qu.:2019-06-30 19:00:08                                        
+##  Max.   :2019-06-30 23:59:12                                        
+##      repo          
+##  Length:10000      
+##  Class :character  
+##  Mode  :character  
+##                    
+##                    
+## </code></pre>
+<p>And the pull_request_comments table has the following columns:</p>
+<pre><code>##        id              user_id          author_association
+##  Min.   :298814091   Length:10000       Length:10000      
+##  1st Qu.:298825518   Class :character   Class :character  
+##  Median :298836008   Mode  :character   Mode  :character  
+##  Mean   :298835293                                        
+##  3rd Qu.:298844975                                        
+##  Max.   :298855085                                        
+##    created_at                      body               url           
+##  Min.   :2019-06-30 00:09:59   Length:10000       Length:10000      
+##  1st Qu.:2019-06-30 09:34:53   Class :character   Class :character  
+##  Median :2019-06-30 14:08:41   Mode  :character   Mode  :character  
+##  Mean   :2019-06-30 13:57:11                                        
+##  3rd Qu.:2019-06-30 18:47:41                                        
+##  Max.   :2019-06-30 23:59:56                                        
+##      repo          
+##  Length:10000      
+##  Class :character  
+##  Mode  :character  
+##                    
+##                    
+## </code></pre>
+<p>The columns for issue_comments and pull_request_comments are exactly the same and the names are quite self-explantory. <code>id</code> is an unique identifier, <code>user_id</code> is the id for the user who posted the comments, <code>author_association</code> is user’s association with the repository (can be “NONE”, “CONTRIBUTOR”, “COLLABORATOR”, “MEMBER”, and “OWNER”), <code>created_at</code> is the time when comment is posted, <code>body</code> is the comment’s content, <code>url</code> is the comment’s link, and <code>repo</code> is the comments associated repo.</p>
 
 </div>
             </section>
