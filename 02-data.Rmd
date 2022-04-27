@@ -1,8 +1,8 @@
 # Data sources
 
-Our data come from [the GHTorrent Project](https://ghtorrent.org/), which is "an effort to create a scalable, queriable, offline mirror of data offered through the Github REST API." It includes the complete data up to 2019-06-30 (in the format of MySql dumps and MongoDB daily dumps). Due to our limited computing power, we choose to use only one day's data (the raw data is about 23 gigabytes), [2019-06-30](http://ghtorrent-downloads.ewi.tudelft.nl/mongo-daily/mongo-dump-2019-06-30.tar.gz).
+Our data come from [the GHTorrent Project](https://ghtorrent.org/){target="_blank"}, which is "an effort to create a scalable, queriable, offline mirror of data offered through the Github REST API." It includes the complete data up to 2019-06-30 (in the format of MySql dumps and MongoDB daily dumps). Due to our limited computing power, we choose to use only one day's data (the raw data is about 23 gigabytes), [2019-06-30](http://ghtorrent-downloads.ewi.tudelft.nl/mongo-daily/mongo-dump-2019-06-30.tar.gz){target="_blank"}.
 
-The raw GHTorrent data consists of 16 tables and is stored in [bson](https://en.wikipedia.org/wiki/BSON) format. The schema is provided under the resources/schema folder:
+The raw GHTorrent data consists of 16 tables and is stored in [bson](https://en.wikipedia.org/wiki/BSON){target="_blank"} format. The schema is provided under the resources/schema folder:
 
 ```{r}
 list.files("resources/schema")
