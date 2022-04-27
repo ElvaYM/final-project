@@ -6,4 +6,7 @@ site: bookdown::bookdown_site
 ---
 
 # Introduction
-EHFAIUFHIA
+Nowadays, plots are popular among all fields because of its conciseness and clearness. R is famous as a great and helpful tool to complete a nice plot. In R packeages, ggplot2 and plotly are two well-known and common tools. But they are of different types, both in attributions and results they provide. 
+attributes of the packages
+pros and cons
+github is the source to compare these two
