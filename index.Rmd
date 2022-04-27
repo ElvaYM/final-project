@@ -8,4 +8,3 @@ site: bookdown::bookdown_site
 # Introduction
 
 There is an increasing trend to use Github as a tool for computer science and other computer related field. Especially, we learn the instructions of Github in class.
-here is an introduction.
