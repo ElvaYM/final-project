@@ -4,27 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Results | YOUR TITLE HERE</title>
-  <meta name="description" content="Chapter 5 Results | YOUR TITLE HERE" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <title>Chapter 5 Results | 5293-Final Project</title>
+  <meta name="description" content="Chapter 5 Results | 5293-Final Project" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Results | YOUR TITLE HERE" />
+  <meta property="og:title" content="Chapter 5 Results | 5293-Final Project" />
   <meta property="og:type" content="book" />
-  
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Results | YOUR TITLE HERE" />
+  <meta name="twitter:title" content="Chapter 5 Results | 5293-Final Project" />
   
   
   
 
-<meta name="author" content="YOUR NAMES HERE" />
+<meta name="author" content="Yujie Tu, Yuchen Meng" />
 
 
-<meta name="date" content="2020-11-09" />
+<meta name="date" content="2022-04-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="missing-values.html"/>
 <link rel="next" href="interactive-component.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,75 @@
 
 
 
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -71,13 +136,17 @@
 <li><a href="./">SHORT TITLE HERE</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a></li>
-<li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a></li>
-<li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a></li>
-<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a></li>
-<li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a></li>
-<li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction<span></span></a></li>
+<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources<span></span></a></li>
+<li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation<span></span></a></li>
+<li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values<span></span></a></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results<span></span></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="results.html"><a href="results.html#issue-comments"><i class="fa fa-check"></i><b>5.1</b> issue comments<span></span></a></li>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#pull-request-comments"><i class="fa fa-check"></i><b>5.2</b> pull request comments<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component<span></span></a></li>
+<li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion<span></span></a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -89,7 +158,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">YOUR TITLE HERE</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">5293-Final Project</a>
           </h1>
         </div>
 
@@ -97,9 +166,168 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="results" class="section level1" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Results</h1>
+<div id="results" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Results<a href="results.html#results" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="results.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-2"><a href="results.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringi)</span>
+<span id="cb7-3"><a href="results.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stopwords)</span>
+<span id="cb7-4"><a href="results.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb7-5"><a href="results.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(qdapRegex)</span>
+<span id="cb7-6"><a href="results.html#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggridges)</span>
+<span id="cb7-7"><a href="results.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="results.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># function used to clean commit messages and issue/pull request comments</span></span>
+<span id="cb8-2"><a href="results.html#cb8-2" aria-hidden="true" tabindex="-1"></a>clean_string <span class="ot">&lt;-</span> <span class="cf">function</span>(string){</span>
+<span id="cb8-3"><a href="results.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  string <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;&#39;t&quot;</span>, <span class="st">&quot;ot&quot;</span>, string) <span class="co"># change &#39;t to not, e.g., don&#39;t -&gt; donot</span></span>
+<span id="cb8-4"><a href="results.html#cb8-4" aria-hidden="true" tabindex="-1"></a>  string <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;&#39;[a-z]+? &quot;</span>, <span class="st">&quot; &quot;</span>, string) <span class="co"># remove &#39;s, &#39;ll and similar</span></span>
+<span id="cb8-5"><a href="results.html#cb8-5" aria-hidden="true" tabindex="-1"></a>  string <span class="ot">&lt;-</span> <span class="fu">rm_url</span>(string) <span class="co"># remove url</span></span>
+<span id="cb8-6"><a href="results.html#cb8-6" aria-hidden="true" tabindex="-1"></a>  string <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;[[:punct:]</span><span class="sc">\n\r</span><span class="st">]&quot;</span>, <span class="st">&quot; &quot;</span>, string) <span class="co"># remove punctuation</span></span>
+<span id="cb8-7"><a href="results.html#cb8-7" aria-hidden="true" tabindex="-1"></a>  string <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot; [0-9]+&quot;</span>, <span class="st">&quot; &quot;</span>, string) <span class="co"># remove numbers</span></span>
+<span id="cb8-8"><a href="results.html#cb8-8" aria-hidden="true" tabindex="-1"></a>  string <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">s+&quot;</span>, <span class="st">&quot; &quot;</span>, string) <span class="co"># remove all extra white space</span></span>
+<span id="cb8-9"><a href="results.html#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(string  <span class="sc">%&gt;%</span> <span class="fu">tolower</span>() <span class="sc">%&gt;%</span> <span class="fu">trimws</span>())</span>
+<span id="cb8-10"><a href="results.html#cb8-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div id="issue-comments" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> issue comments<a href="results.html#issue-comments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="results.html#cb9-1" aria-hidden="true" tabindex="-1"></a>issue<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">&quot;resources/data/issue_comments.csv&quot;</span>)</span>
+<span id="cb9-2"><a href="results.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># remove those whose comments is not written in English</span></span>
+<span id="cb9-3"><a href="results.html#cb9-3" aria-hidden="true" tabindex="-1"></a>issue<span class="ot">&lt;-</span>issue <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="results.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">encoding_comment=</span><span class="fu">stri_enc_mark</span>(body))</span>
+<span id="cb9-5"><a href="results.html#cb9-5" aria-hidden="true" tabindex="-1"></a>issue <span class="ot">&lt;-</span> issue <span class="sc">%&gt;%</span></span>
+<span id="cb9-6"><a href="results.html#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(encoding_comment<span class="sc">==</span><span class="st">&quot;ASCII&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-7"><a href="results.html#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>encoding_comment)</span>
+<span id="cb9-8"><a href="results.html#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># clean the body column and split it into a list of word</span></span>
+<span id="cb9-9"><a href="results.html#cb9-9" aria-hidden="true" tabindex="-1"></a>issue <span class="ot">&lt;-</span> issue <span class="sc">%&gt;%</span></span>
+<span id="cb9-10"><a href="results.html#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">comment_string=</span><span class="fu">sapply</span>(body, clean_string)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-11"><a href="results.html#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">comment_split=</span><span class="fu">strsplit</span>(comment_string, <span class="st">&quot; &quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-12"><a href="results.html#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">comment_length=</span><span class="fu">sapply</span>(comment_split, length))</span></code></pre></div>
+<p>First, let try to see if there is any relationship between user’s association with the repo and the length of their posted issue comments. Yet, we can see that there are a lot of outliers, which makes the box plot impossible to analysis.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="results.html#cb10-1" aria-hidden="true" tabindex="-1"></a>issue <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="results.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(author_association, comment_length) <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href="results.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> author_association, <span class="at">y =</span> comment_length)) <span class="sc">+</span> </span>
+<span id="cb10-4"><a href="results.html#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
+<span id="cb10-5"><a href="results.html#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb10-6"><a href="results.html#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;author association&quot;</span>, <span class="at">y =</span> <span class="st">&quot;comment length&quot;</span>, <span class="at">title =</span> <span class="st">&quot;issue comments&#39; boxplot&quot;</span>)</span></code></pre></div>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-225-1.png" width="672" style="display: block; margin: auto;" />
+Therefore, we decided to first remove the longest 10% comments and redraw the box plot. Now we can clearly see, after removing the longest 10% comments, that the distribution is still left skew and that “NONE” users (users who does not have any association with the repo) tend to leave longer “issue” comments.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="results.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remove the longest 10% comment</span></span>
+<span id="cb11-2"><a href="results.html#cb11-2" aria-hidden="true" tabindex="-1"></a>issue_comment_len_first_90_perc <span class="ot">&lt;-</span> issue <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="results.html#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(comment_length) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-4"><a href="results.html#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rank =</span> <span class="fu">row_number</span>(comment_length)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-5"><a href="results.html#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(rank <span class="sc">&lt;</span> <span class="fl">0.90</span> <span class="sc">*</span> <span class="fu">nrow</span>(issue)) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-6"><a href="results.html#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">author_association =</span> <span class="fu">fct_reorder</span>(author_association, comment_length))</span>
+<span id="cb11-7"><a href="results.html#cb11-7" aria-hidden="true" tabindex="-1"></a>issue_comment_len_first_90_perc <span class="sc">%&gt;%</span> </span>
+<span id="cb11-8"><a href="results.html#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(author_association, comment_length) <span class="sc">%&gt;%</span></span>
+<span id="cb11-9"><a href="results.html#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> author_association, <span class="at">y =</span> comment_length)) <span class="sc">+</span> </span>
+<span id="cb11-10"><a href="results.html#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
+<span id="cb11-11"><a href="results.html#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb11-12"><a href="results.html#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;author association&quot;</span>, <span class="at">y =</span> <span class="st">&quot;comment length&quot;</span>, <span class="at">title =</span> <span class="st">&quot;issue comments&#39; boxplot&quot;</span>)</span></code></pre></div>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-226-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>By further inspecting the distribution of each category, we can see that the peak of “OWNER” is to the left of all other categories and that the peak of “COLLABORATOR” is a lot higher than other categories and also to the right of other categories except “NONE”. We may guess that “OWNER” tend to leave shorter and “COLLABORATOR” tend to leave longer comments than others.</p>
+<p>Also the distribution support our observation from previous plot that “NONE” tend to (or rather with higher probability to) leave longer issue comments than others, and it makes sense since users who do not involve in the development of the project tend to have problems and/or questions.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="results.html#cb12-1" aria-hidden="true" tabindex="-1"></a>issue_comment_len_first_90_perc <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="results.html#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(author_association, comment_length) <span class="sc">%&gt;%</span></span>
+<span id="cb12-3"><a href="results.html#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> comment_length, <span class="at">y =</span> author_association, <span class="at">fill =</span> <span class="fu">stat</span>(quantile))) <span class="sc">+</span></span>
+<span id="cb12-4"><a href="results.html#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_density_ridges</span>(<span class="at">quantile_lines =</span> <span class="cn">FALSE</span>, <span class="at">calc_ecdf =</span> <span class="cn">TRUE</span>, <span class="at">bandwidth =</span> <span class="dv">1</span>,</span>
+<span id="cb12-5"><a href="results.html#cb12-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">geom =</span> <span class="st">&quot;density_ridges_gradient&quot;</span>) <span class="sc">+</span></span>
+<span id="cb12-6"><a href="results.html#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">name =</span> <span class="st">&quot;quantile&quot;</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;1st&quot;</span>, <span class="st">&quot;2nd&quot;</span>, <span class="st">&quot;3rd&quot;</span>, <span class="st">&quot;4th&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb12-7"><a href="results.html#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;comment length&quot;</span>, <span class="at">y =</span> <span class="st">&quot;author association&quot;</span>, <span class="at">title =</span> <span class="st">&quot;issue comments&#39; distributions&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb12-8"><a href="results.html#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_ridges</span>()</span></code></pre></div>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-227-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Next, we would like to see the most common word people use in their comments. Not surprisingly, words like “issue”, “test”, “code”, “problem”, “error”, which are related to codings, comes top of the list. And we can also see github users are very polite since words like “can”, “please”, and “thanks” also appears very frequently.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="results.html#cb13-1" aria-hidden="true" tabindex="-1"></a>issue_split<span class="ot">&lt;-</span> issue_comment_len_first_90_perc <span class="sc">%&gt;%</span> </span>
+<span id="cb13-2"><a href="results.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(comment_split) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="results.html#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(comment_split) <span class="sc">%&gt;%</span></span>
+<span id="cb13-4"><a href="results.html#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(comment_split) <span class="sc">%&gt;%</span></span>
+<span id="cb13-5"><a href="results.html#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(<span class="at">name =</span> <span class="st">&quot;Freq&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-6"><a href="results.html#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span> comment_split <span class="sc">%in%</span> <span class="fu">stopwords</span>(<span class="st">&quot;en&quot;</span>, <span class="at">source =</span> <span class="st">&quot;snowball&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-7"><a href="results.html#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Freq))</span>
+<span id="cb13-8"><a href="results.html#cb13-8" aria-hidden="true" tabindex="-1"></a>issue_split <span class="sc">%&gt;%</span></span>
+<span id="cb13-9"><a href="results.html#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">30</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-10"><a href="results.html#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_reorder</span>(comment_split, Freq, <span class="at">.desc=</span><span class="cn">TRUE</span>), <span class="at">y =</span> Freq)) <span class="sc">+</span></span>
+<span id="cb13-11"><a href="results.html#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&#39;identity&#39;</span>) <span class="sc">+</span> </span>
+<span id="cb13-12"><a href="results.html#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust=</span><span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb13-13"><a href="results.html#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;word&quot;</span>, <span class="at">title =</span> <span class="st">&quot;issue comments&#39; most frequent word&quot;</span>)</span></code></pre></div>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-229-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="pull-request-comments" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> pull request comments<a href="results.html#pull-request-comments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="results.html#cb14-1" aria-hidden="true" tabindex="-1"></a>pull<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">&quot;resources/data/pull_request_comments.csv&quot;</span>)</span>
+<span id="cb14-2"><a href="results.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># remove those whose comments is not written in English</span></span>
+<span id="cb14-3"><a href="results.html#cb14-3" aria-hidden="true" tabindex="-1"></a>pull<span class="ot">&lt;-</span>pull <span class="sc">%&gt;%</span></span>
+<span id="cb14-4"><a href="results.html#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">encoding_comment=</span><span class="fu">stri_enc_mark</span>(body))</span>
+<span id="cb14-5"><a href="results.html#cb14-5" aria-hidden="true" tabindex="-1"></a>pull <span class="ot">&lt;-</span> pull <span class="sc">%&gt;%</span></span>
+<span id="cb14-6"><a href="results.html#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(encoding_comment<span class="sc">==</span><span class="st">&quot;ASCII&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-7"><a href="results.html#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>encoding_comment)</span>
+<span id="cb14-8"><a href="results.html#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># clean the body column and split it into a list of word</span></span>
+<span id="cb14-9"><a href="results.html#cb14-9" aria-hidden="true" tabindex="-1"></a>pull <span class="ot">&lt;-</span> pull <span class="sc">%&gt;%</span></span>
+<span id="cb14-10"><a href="results.html#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">comment_string=</span><span class="fu">sapply</span>(body, clean_string2)) <span class="sc">%&gt;%</span></span>
+<span id="cb14-11"><a href="results.html#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">comment_split=</span><span class="fu">strsplit</span>(comment_string, <span class="st">&quot; &quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-12"><a href="results.html#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">comment_length=</span><span class="fu">sapply</span>(comment_split, length))</span></code></pre></div>
+<p>Similarly, for pull request comments, there also are a large amount of outliers, although not that extreme compared to issue comments, but still the outliers make the box plot harder to analysis.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="results.html#cb15-1" aria-hidden="true" tabindex="-1"></a>pull <span class="sc">%&gt;%</span> </span>
+<span id="cb15-2"><a href="results.html#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(author_association, comment_length) <span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a href="results.html#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> author_association, <span class="at">y =</span> comment_length)) <span class="sc">+</span> </span>
+<span id="cb15-4"><a href="results.html#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb15-5"><a href="results.html#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb15-6"><a href="results.html#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;author association&quot;</span>, <span class="at">y =</span> <span class="st">&quot;comment length&quot;</span>, <span class="at">title =</span> <span class="st">&quot;pull request comments&#39; boxplot&quot;</span>)</span></code></pre></div>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-231-1.png" width="672" style="display: block; margin: auto;" />
+So, we remove the longest 10% comments, and we can see this time, “NONE” users no longer tend to leave longer comments, but rather they seems to leave shorter comments than others.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="results.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remove the highest 10% (in terms of length of comments)</span></span>
+<span id="cb16-2"><a href="results.html#cb16-2" aria-hidden="true" tabindex="-1"></a>pull_comment_len_first_90_perc <span class="ot">&lt;-</span> pull <span class="sc">%&gt;%</span> </span>
+<span id="cb16-3"><a href="results.html#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(comment_length) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-4"><a href="results.html#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rank =</span> <span class="fu">row_number</span>(comment_length)) <span class="sc">%&gt;%</span></span>
+<span id="cb16-5"><a href="results.html#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(rank <span class="sc">&lt;</span> <span class="fl">0.90</span> <span class="sc">*</span> <span class="fu">nrow</span>(pull)) <span class="sc">%&gt;%</span></span>
+<span id="cb16-6"><a href="results.html#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">author_association =</span> <span class="fu">fct_reorder</span>(author_association, comment_length))</span>
+<span id="cb16-7"><a href="results.html#cb16-7" aria-hidden="true" tabindex="-1"></a>pull_comment_len_first_90_perc <span class="sc">%&gt;%</span> </span>
+<span id="cb16-8"><a href="results.html#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(author_association, comment_length) <span class="sc">%&gt;%</span></span>
+<span id="cb16-9"><a href="results.html#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> author_association, <span class="at">y =</span> comment_length)) <span class="sc">+</span> </span>
+<span id="cb16-10"><a href="results.html#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb16-11"><a href="results.html#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb16-12"><a href="results.html#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;author association&quot;</span>, <span class="at">y =</span> <span class="st">&quot;comment length&quot;</span>, <span class="at">title =</span> <span class="st">&quot;pull request comments&#39; boxplot&quot;</span>)</span></code></pre></div>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-232-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>But by examining the ridgeline plot, the peak of “NONE” is still to right of other categories, especially compared to “CONTRIBUTOR” and “OWNER”. We may infer that “OWNER” and “CONTRIBUTOR” leaves shorter message than others with higher probability, yet the difference is only within a few words</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="results.html#cb17-1" aria-hidden="true" tabindex="-1"></a>pull_comment_len_first_90_perc <span class="sc">%&gt;%</span> </span>
+<span id="cb17-2"><a href="results.html#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(author_association, comment_length) <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="results.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> comment_length, <span class="at">y =</span> author_association, <span class="at">fill =</span> <span class="fu">stat</span>(quantile))) <span class="sc">+</span></span>
+<span id="cb17-4"><a href="results.html#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_density_ridges</span>(<span class="at">quantile_lines =</span> <span class="cn">FALSE</span>, <span class="at">calc_ecdf =</span> <span class="cn">TRUE</span>, <span class="at">bandwidth =</span> <span class="dv">1</span>,</span>
+<span id="cb17-5"><a href="results.html#cb17-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">geom =</span> <span class="st">&quot;density_ridges_gradient&quot;</span>) <span class="sc">+</span></span>
+<span id="cb17-6"><a href="results.html#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">name =</span> <span class="st">&quot;quantile&quot;</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;1st&quot;</span>, <span class="st">&quot;2nd&quot;</span>, <span class="st">&quot;3rd&quot;</span>, <span class="st">&quot;4th&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb17-7"><a href="results.html#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;comment length&quot;</span>, <span class="at">y =</span> <span class="st">&quot;author association&quot;</span>, <span class="at">title =</span> <span class="st">&quot;pull request comments&#39; distributions&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb17-8"><a href="results.html#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_ridges</span>()</span></code></pre></div>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-233-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Similarly, we still can see polite words like “can”, “please”, and code-related words like “code”, “function”, “method” “file”, “comment” and “error” comes top of the list. But we also can see words like “add”, “remove”, “fixed”, “good”, and “better”, which is related to pull requests since pull request is all about modifying codes to make it better.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="results.html#cb18-1" aria-hidden="true" tabindex="-1"></a>pull_split<span class="ot">&lt;-</span> pull_comment_len_first_90_perc <span class="sc">%&gt;%</span> <span class="fu">select</span>(comment_split) <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a href="results.html#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(comment_split) <span class="sc">%&gt;%</span></span>
+<span id="cb18-3"><a href="results.html#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(comment_split) <span class="sc">%&gt;%</span></span>
+<span id="cb18-4"><a href="results.html#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(<span class="at">name =</span> <span class="st">&quot;Freq&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb18-5"><a href="results.html#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span> comment_split <span class="sc">%in%</span> <span class="fu">stopwords</span>(<span class="st">&quot;en&quot;</span>, <span class="at">source =</span> <span class="st">&quot;snowball&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb18-6"><a href="results.html#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Freq))</span>
+<span id="cb18-7"><a href="results.html#cb18-7" aria-hidden="true" tabindex="-1"></a>pull_split <span class="sc">%&gt;%</span></span>
+<span id="cb18-8"><a href="results.html#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">30</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb18-9"><a href="results.html#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_reorder</span>(comment_split, Freq, <span class="at">.desc=</span><span class="cn">TRUE</span>), <span class="at">y =</span> Freq)) <span class="sc">+</span></span>
+<span id="cb18-10"><a href="results.html#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">stat=</span><span class="st">&#39;identity&#39;</span>) <span class="sc">+</span> </span>
+<span id="cb18-11"><a href="results.html#cb18-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust=</span><span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb18-12"><a href="results.html#cb18-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;word&quot;</span>, <span class="at">title =</span> <span class="st">&quot;pull request comments&#39; most frequent word&quot;</span>)</span></code></pre></div>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-234-1.png" width="672" style="display: block; margin: auto;" />
+## Comparison between Issue and Pull Request</p>
+<p>Intuitively, the composition of users leaving issue comments should be relatively different from the composition of users leaving pull request comments. And it indeed is the case. We can see that “NONE” users leaves twice as many comments as others but only half as many comments as “CONTRIBUTOR” and “MEMBER” users. Surprisingly, “OWNER” user leaves the fewest number of pull request comments.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="results.html#cb19-1" aria-hidden="true" tabindex="-1"></a>pull_comment_len_first_90_perc <span class="sc">%&gt;%</span> </span>
+<span id="cb19-2"><a href="results.html#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(author_association, comment_length) <span class="sc">%&gt;%</span></span>
+<span id="cb19-3"><a href="results.html#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(author_association) <span class="sc">%&gt;%</span></span>
+<span id="cb19-4"><a href="results.html#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">pull_request =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb19-5"><a href="results.html#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(</span>
+<span id="cb19-6"><a href="results.html#cb19-6" aria-hidden="true" tabindex="-1"></a>    issue_comment_len_first_90_perc <span class="sc">%&gt;%</span> </span>
+<span id="cb19-7"><a href="results.html#cb19-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(author_association, comment_length) <span class="sc">%&gt;%</span></span>
+<span id="cb19-8"><a href="results.html#cb19-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">group_by</span>(author_association) <span class="sc">%&gt;%</span></span>
+<span id="cb19-9"><a href="results.html#cb19-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">summarise</span>(<span class="at">issue =</span> <span class="fu">n</span>())</span>
+<span id="cb19-10"><a href="results.html#cb19-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb19-11"><a href="results.html#cb19-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">author_association =</span> <span class="fu">fct_reorder</span>(author_association, issue, <span class="at">.desc =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb19-12"><a href="results.html#cb19-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>author_association, <span class="at">names_to =</span> <span class="st">&quot;Category&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb19-13"><a href="results.html#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> author_association, <span class="at">y =</span> value, <span class="at">fill =</span> Category)) <span class="sc">+</span></span>
+<span id="cb19-14"><a href="results.html#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb19-15"><a href="results.html#cb19-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;author association&quot;</span>, <span class="at">y =</span> <span class="st">&quot;number&quot;</span>, <span class="at">title =</span> <span class="st">&quot;comment number of Issue vs Pull Request&quot;</span>)</span></code></pre></div>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-235-1.png" width="672" style="display: block; margin: auto;" /></p>
 
+</div>
 </div>
             </section>
 
@@ -111,7 +339,6 @@
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -130,6 +357,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -138,7 +366,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/main/05-results.Rmd",
+"link": "https://github.com/5293-project-statistical-graphics/final-project/edit/main/05-results.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -146,10 +374,14 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/main/05-results.Rmd",
+"link": "https://github.com/5293-project-statistical-graphics/final-project/blob/main/05-results.Rmd",
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

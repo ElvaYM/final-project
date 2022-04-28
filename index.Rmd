@@ -1,12 +1,18 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAMES HERE"
+title: "5293-Final Project"
+author: "Yujie Tu, Yuchen Meng"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
 # Introduction
+<<<<<<< HEAD
 Nowadays, plots are popular among all fields because of its conciseness and clearness. R is famous as a great and helpful tool to complete a nice plot. In R packeages, ggplot2 and plotly are two well-known and common tools. But they are of different types, both in attributions and results they provide. 
 attributes of the packages
 pros and cons
 github is the source to compare these two
+=======
+
+There is an increasing trend to use Github as a tool for computer science and other computer related field. Especially, we learn the instructions of Github in class.
+3ERNRIQROQ
+>>>>>>> upstream/main
