@@ -7,12 +7,9 @@ site: bookdown::bookdown_site
 
 # Introduction
 <<<<<<< HEAD
-Nowadays, plots are popular among all fields because of its conciseness and clearness. R is famous as a great and helpful tool to complete a nice plot. In R packeages, ggplot2 and plotly are two well-known and common tools. But they are of different types, both in attributions and results they provide. 
-attributes of the packages
-pros and cons
-github is the source to compare these two
-=======
+Nowadays, plots are popular among all fields because of its conciseness and clearness. R is famous as a great and helpful tool to complete a nice plot. In R packages, ggplot2 and plotly are two well-known and common tools. But they are of different types, both in attributions and results they provide. 
+ggplot2 is an open-sourced data visualization package created by Hadley Wickham. ggplot2 is now over 10 years old and is used by hundreds of thousands of people to make millions of plots. ggplot2 is a system for declaratively creating graphics, based on The Grammar of Graphics. And plotly is a commercial package and popular these years though it is younger than ggplot2. Plotly is designed by a technical computing company.
+Due to the difference of these two packages, different group of people may have diverse preference. Plotly has simple syntax and is compatible with many languages. Plotly’s visualization library offers users enhanced interactivity features, such as the ability to interact with graphs on display and zoom in and out, which make for a more engaging storytelling experience. In addition, these interactive tools are customizable, and users can add interactive features like sliders, dropdowns, or buttons when showing various graph perspectives. However, the color options are limited in this package. In terms of ggplot2, ggplot2 allows users to incorporate various forms of complexity to their visualizations without additional hassle, and also remove them with ease if necessary. Besides, ggplot2’s default colors and settings tend to appeal to users more than those of other systems. Elements like margins, points, axis titles, and tickmarks look better when using ggplot2.  
+There is an increasing trend to use Github as a tool for computer science and other computer related field. Especially, we learn the instructions of Github in class. And the data of Github can reflect some information of the update process of packages, so we can focus on ggplot2 and plotly and try to explore the information of these packages. 
 
-There is an increasing trend to use Github as a tool for computer science and other computer related field. Especially, we learn the instructions of Github in class.
-3ERNRIQROQ
 >>>>>>> upstream/main
